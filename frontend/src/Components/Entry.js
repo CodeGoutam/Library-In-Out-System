@@ -3,7 +3,8 @@ const Entry = () => {
     const [id, setId] = useState('')
     const Submit = async (e) => {
         e.preventDefault();
-        let res = fetch("http://localhost:5000/api/user", {
+        // let res = fetch("http://localhost:5000/api/user", {
+        let res = fetch("https://library-in-out-system-backend.vercel.app/api/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

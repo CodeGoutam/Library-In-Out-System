@@ -3,7 +3,8 @@ import ExitCard from './ExitCard'
 const Exit = () => {
     const [data, setData] = useState([])
     const fetching = async () => {
-        await fetch("http://localhost:5000/api/db", {
+        // await fetch("http://localhost:5000/api/db", {
+        await fetch("https://library-in-out-system-backend.vercel.app/api/db", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
