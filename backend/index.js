@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://hgoutam2001:library@cluster0.vdoo9iw.mongodb.net
         console.log("Db connection error");
     })
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
     res.send("first")
 })
 app.use("/api", require("./Users"))
