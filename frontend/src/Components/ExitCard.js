@@ -1,6 +1,6 @@
 const ExitCard = (props) => {
     const Exit = async () => {
-        await fetch("https://library-in-out-system-backend.vercel.app/api/exit", {
+        await fetch("https://library-in-out-system-backend.onrender.com/api/exit", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
