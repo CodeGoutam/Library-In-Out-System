@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 const Entry = () => {
     const [id, setId] = useState('')
     const Submit = async (e) => {
         e.preventDefault();
         // let res = fetch("http://localhost:5000/api/user", {
-        let res = fetch("https://library-in-out-system-backend.onrender.com/api/user", {
+        fetch("https://library-in-out-system-backend.onrender.com/api/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
