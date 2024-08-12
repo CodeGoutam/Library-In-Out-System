@@ -10,7 +10,7 @@ function App() {
                 </div>
 
                 <div className="text-sm sm:text-2xl font-bold shadow-lg p-1 sm:p-2 flex sm:space-x-2">
-                    <p className="w-fit p-1 border-2 rounded-lg  bg-white shadow-lg"style={{color:'#2C3E50'}} >Check-In & Check-Out System</p>
+                    <p className="w-fit p-1 border-2 rounded-lg  bg-white shadow-lg" style={{ color: '#2C3E50' }} >Check-In & Check-Out System</p>
                 </div>
             </div>
             <div className='md:flex h-screen'>
