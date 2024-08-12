@@ -1,10 +1,10 @@
-import {  useState } from 'react'
+import { useState } from 'react'
 const Entry = () => {
     const [id, setId] = useState('')
     const Submit = async (e) => {
         e.preventDefault();
-        // let res = fetch("http://localhost:5000/api/user", {
-        fetch("https://library-in-out-system-backend.onrender.com/api/user", {
+        // fetch("http://localhost:5000/api/user", {
+            fetch("https://library-in-out-system-backend.onrender.com/api/user", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -14,6 +14,11 @@ const Entry = () => {
                 InTime: `${new Date().getHours() ? new Date().getHours() % 12 : "12"}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
                 OutTime: ""
             })
+        }).then(async (res) => {
+            res = await res.text()
+            if (res === "Already Present") {
+                alert(res)
+            }
         })
         setId('')
     }
