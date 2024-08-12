@@ -1,14 +1,14 @@
 const ExitCard = (props) => {
     const Exit = async () => {
         await fetch("https://library-in-out-system-backend.onrender.com/api/exit", {
-        // await fetch("http://localhost:5000/api/exit", {
+            // await fetch("http://localhost:5000/api/exit", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 RegId: props.id,
-                OutTime: `${new Date().getHours()%12}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+                OutTime: `${new Date().getHours() % 12}:${new Date().getMinutes()}:${new Date().getSeconds()}`
             })
         })
             .then(async (res) => {
